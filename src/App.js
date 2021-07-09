@@ -5,7 +5,7 @@ import projectData from './projectData';
 
 function App() {
   return (
-    <div style={{}}>
+    <div>
       <div
         style={{
           height: '100vh',
@@ -29,15 +29,15 @@ function App() {
       <div style={styles.sectionContainer}>
         <h1 style={{ textAlign: 'center' }}>Lab</h1>
         <div style={{ height: 40 }} />
-        {projectData.lab.map((labProject) => {
-          return <ProjectTile project={labProject} key={labProject.name} />;
+        {projectData.lab.map((labProject, index) => {
+          return <ProjectTile project={labProject} key={labProject.name} index={index} />;
         })}
       </div>
       <div style={styles.sectionContainer}>
         <h1 style={{ textAlign: 'center' }}>Work</h1>
         <div style={{ height: 40 }} />
-        {projectData.work.map((workProject) => {
-          return <ProjectTile project={workProject} key={workProject.name} />;
+        {projectData.work.map((workProject, index) => {
+          return <ProjectTile project={workProject} key={workProject.name} index={index} />;
         })}
       </div>
       <div style={styles.sectionContainer}>
