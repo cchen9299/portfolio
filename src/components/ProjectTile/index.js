@@ -4,75 +4,81 @@ import TextPill from '../TextPill';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGooglePlay, faAppStore } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { Parallax } from 'react-scroll-parallax';
 
 export default function ProjectTile({ project, index }) {
   return (
     <Wrapper href={project.url} target="_blank">
-      <ContentContainer>
-        <p style={{ fontSize: 19, lineHeight: '27px' }}>
-          {project.association} | {project.year}
-        </p>
-        <H0>{project.name}</H0>
-        <div
-          style={{
-            height: 5,
-            width: '70%',
-            backgroundColor: 'white',
-            margin: '16px 0 4px',
-            borderRadius: 15,
-          }}
-        />
-        <div
-          style={{
-            height: 5,
-            width: '60%',
-            backgroundColor: 'white',
-            margin: '4px 0 16px',
-            borderRadius: 15,
-            alignSelf: 'flex-end',
-          }}
-        />
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-          {project.tags.map((tag) => {
-            return <TextPill key={tag}>{tag}</TextPill>;
-          })}
-        </div>
-        <div style={{ height: 16 }} />
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          {project.github && (
-            <IconLink href={project.github} target="_blank">
-              <FontAwesomeIcon icon={faGithub} size={'2x'} />
-            </IconLink>
-          )}
-          {project.appstore && (
-            <IconLink href={project.appstore} target="_blank">
-              <FontAwesomeIcon icon={faAppStore} size={'2x'} />
-            </IconLink>
-          )}
-          {project.playstore && (
-            <IconLink href={project.playstore} target="_blank">
-              <FontAwesomeIcon icon={faGooglePlay} size={'lg'} />
-            </IconLink>
-          )}
-          {project.url && (
-            <IconLink href={project.url} target="_blank">
-              <FontAwesomeIcon icon={faLink} size={'lg'} />
-            </IconLink>
-          )}
-        </div>
-      </ContentContainer>
+      <Parallax y={['-50px', '50px']} styleOuter={{ width: '100%', zIndex: 10 }}>
+        <ContentContainer>
+          <p style={{ fontSize: 19, lineHeight: '27px' }}>
+            {project.association} | {project.year}
+          </p>
+          <H0>{project.name}</H0>
+          <div style={styles.topHorizontalLine} />
+          <div style={styles.bottomHorizontalLine} />
+          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            {project.tags.map((tag) => {
+              return <TextPill key={tag}>{tag}</TextPill>;
+            })}
+          </div>
+          <div style={{ height: 16 }} />
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            {project.github && (
+              <IconLink href={project.github} target="_blank">
+                <FontAwesomeIcon icon={faGithub} size={'2x'} />
+              </IconLink>
+            )}
+            {project.appstore && (
+              <IconLink href={project.appstore} target="_blank">
+                <FontAwesomeIcon icon={faAppStore} size={'2x'} />
+              </IconLink>
+            )}
+            {project.playstore && (
+              <IconLink href={project.playstore} target="_blank">
+                <FontAwesomeIcon icon={faGooglePlay} size={'lg'} />
+              </IconLink>
+            )}
+            {project.url && (
+              <IconLink href={project.url} target="_blank">
+                <FontAwesomeIcon icon={faLink} size={'lg'} />
+              </IconLink>
+            )}
+          </div>
+        </ContentContainer>
+      </Parallax>
       <Image backgroundImage={project.image} />
-      <IndexNumber>0{index + 1}</IndexNumber>
+      <Parallax y={['500px', '-100px']}>
+        <IndexNumber>0{index + 1}</IndexNumber>
+      </Parallax>
     </Wrapper>
   );
 }
+
+const styles = {
+  topHorizontalLine: {
+    height: 5,
+    width: '70%',
+    backgroundColor: 'white',
+    margin: '16px 0 4px',
+    borderRadius: 15,
+  },
+  bottomHorizontalLine: {
+    height: 5,
+    width: '60%',
+    backgroundColor: 'white',
+    margin: '4px 0 16px',
+    borderRadius: 15,
+    alignSelf: 'flex-end',
+  },
+};
 
 const Wrapper = styled.div`
   height: 70vh;
   width: 100%;
   color: white;
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 30vh;
   position: relative;
   align-items: center;
   :last-child {
@@ -85,6 +91,7 @@ const Image = styled.div`
   height: 100%;
   background-image: url(${(props) => props.backgroundImage});
   background-size: cover;
+  background-color: pink;
   position: absolute;
   right: 0;
 `;
@@ -118,9 +125,6 @@ const IndexNumber = styled.h1`
   font-size: 144px;
   line-height: 144px;
   font-family: 'Slabo 27px';
-  position: absolute;
-  right: -50px;
-  bottom: 50px;
   color: red;
   opacity: 0.3;
 `;
