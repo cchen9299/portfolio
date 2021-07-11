@@ -48,7 +48,7 @@ export default function ProjectTile({ project, index }) {
         </ContentContainer>
       </Parallax>
       <Image backgroundImage={project.image} />
-      <Parallax y={['500px', '-100px']}>
+      <Parallax y={['500px', '-100px']} x={['100px', '100px']}>
         <IndexNumber>0{index + 1}</IndexNumber>
       </Parallax>
     </Wrapper>
@@ -122,8 +122,8 @@ const H0 = styled.h1`
   // background-clip: text;
 `;
 const IndexNumber = styled.h1`
-  font-size: 144px;
-  line-height: 144px;
+  font-size: 256px;
+  line-height: 256px;
   font-family: 'Slabo 27px';
   color: red;
   opacity: 0.3;
