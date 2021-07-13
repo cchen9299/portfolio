@@ -82,13 +82,6 @@ function HomeScreen() {
 
 export default HomeScreen;
 
-const Bubble = styled.div`
-  width: 100px;
-  height: 100px;
-  background-color: pink;
-  animation: ${(props) => props.move} 3s infinite;
-`;
-
 const StyledAnchorLink = styled(AnchorLink)`
   color: white;
   font-size: 19px;
