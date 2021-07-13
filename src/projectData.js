@@ -9,7 +9,7 @@ const projectData = {
       name: 'Cheers',
       year: '2021',
       association: 'Personal Project',
-      tags: ['ReactJS', 'CSS', 'Styled Components', 'HTML', 'Responsive'],
+      tags: ['ReactJS', 'Redux', 'CSS', 'Styled Components', 'HTML', 'Responsive'],
       image: cheersImage,
       url: 'https://cheers.hankchen.space',
       github: 'https://github.com/cchen9299/cheers',

@@ -6,7 +6,7 @@ export default function ProjectTile({ achievment, index }) {
 
   return (
     <Wrapper>
-      <h3 style={{ width: '35%', textAlign: 'right' }}>{achievment?.year}</h3>
+      <h3 style={{ width: '40%', textAlign: 'right' }}>{achievment?.year}</h3>
       <div style={{ width: 100, top: 28, position: 'relative' }}>
         <div
           style={{
