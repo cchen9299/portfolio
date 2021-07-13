@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 export default function TextPill({ children }) {
   return (
@@ -9,7 +10,7 @@ export default function TextPill({ children }) {
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled(animated.div)`
   padding: 6px 12px;
   background-color: rgba(0, 0, 0, 0.3);
   margin-right: 8px;
