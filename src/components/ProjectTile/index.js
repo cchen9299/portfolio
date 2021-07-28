@@ -148,18 +148,6 @@ const H0 = styled(animated.div)`
   line-height: 96px;
   font-weight: 700;
   text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  // font-size: 48px;
-  // line-height: 48px;
-  // font-weight: 700;
-  // text-transform: uppercase;
-  // letter-spacing: 10px;
-
-  // color: transparent;
-  // background-color: #fff;
-  // text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-  // -webkit-background-clip: text;
-  // -moz-background-clip: text;
-  // background-clip: text;
 `;
 const IndexNumber = styled.h1`
   font-size: 256px;
