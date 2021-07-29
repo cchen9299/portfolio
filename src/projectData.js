@@ -6,6 +6,23 @@ import maverick from './img/maverick.png';
 const projectData = {
   lab: [
     {
+      name: 'Scoreboard',
+      year: '2021',
+      association: 'Personal Project',
+      tags: [
+        'MongoDB',
+        'Express',
+        'ReactJS',
+        'React Context',
+        'NodeJS',
+        'Styled Components',
+        'HTML',
+      ],
+      image: null,
+      url: null,
+      github: 'https://github.com/cchen9299/scoreboard',
+    },
+    {
       name: 'Cheers',
       year: '2021',
       association: 'Personal Project',
@@ -20,12 +37,19 @@ const projectData = {
       name: 'SilverSneakers Go',
       year: '2019-2021',
       association: 'Synapse Studios',
-      tags: ['React Native StyleSheet', 'RN Animation', 'UIUX Design', 'UX Research', 'Senior Centered'],
+      tags: [
+        'React Native StyleSheet',
+        'RN Animation',
+        'UIUX Design',
+        'UX Research',
+        'Senior Centered',
+      ],
       image: ssgo,
       url: 'https://www.synapsestudios.com/work/ssgo/',
       github: null,
       appstore: 'https://apps.apple.com/us/app/silversneakers-go/id1410437380',
-      playstore: 'https://play.google.com/store/apps/details?id=com.tivityhealth.silversneakersgo&hl=en_US&gl=US',
+      playstore:
+        'https://play.google.com/store/apps/details?id=com.tivityhealth.silversneakersgo&hl=en_US&gl=US',
     },
     {
       name: 'Serene Guide',
@@ -47,7 +71,8 @@ const projectData = {
       url: null,
       github: null,
       appstore: 'https://apps.apple.com/us/app/well-ontarget-fitness-program/id1453242180',
-      playstore: 'https://play.google.com/store/apps/details?id=com.tivityhealth.prime.wellontarget&hl=en_US&gl=US',
+      playstore:
+        'https://play.google.com/store/apps/details?id=com.tivityhealth.prime.wellontarget&hl=en_US&gl=US',
     },
     {
       name: 'Maverick',
